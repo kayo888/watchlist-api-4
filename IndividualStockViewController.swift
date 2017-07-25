@@ -53,6 +53,7 @@ class IndividualStockViewController: UIViewController {
             
             self.newsArray = newsItems
         }
+        print("cheese")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
