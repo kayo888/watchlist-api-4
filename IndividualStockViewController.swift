@@ -75,6 +75,8 @@ class IndividualStockViewController: UIViewController {
     
 }
 
+extension IndividualStockViewController: 
+
 
 
 extension IndividualStockViewController: UICollectionViewDataSource {

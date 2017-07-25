@@ -203,11 +203,16 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7cI-2X-geS" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="323" width="375" height="296"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vOl-Ij-85b">
+                                        <rect key="frame" x="0.0" y="323" width="375" height="344"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
+                                        <view key="tableFooterView" contentMode="scaleToFill" id="ess-Ok-cul">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="283"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -221,7 +226,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="individualLineChartView" destination="7cI-2X-geS" id="yer-x3-Kbs"/>
                         <outlet property="individualStockView" destination="hOd-h2-bte" id="79S-co-jFe"/>
                         <outlet property="logo" destination="8mw-ZN-wf8" id="DgY-Uc-eVq"/>
                         <outlet property="nameLabel" destination="uiZ-XR-qT1" id="Blx-UR-BlT"/>
