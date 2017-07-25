@@ -1,0 +1,6 @@
+framework module Pods_watchlist_apiUITests {
+  umbrella header "Pods-watchlist apiUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

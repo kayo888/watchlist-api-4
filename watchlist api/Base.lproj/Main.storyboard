@@ -1,26 +1,273 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VeT-xA-Pi8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Stock View Controller-->
+        <scene sceneID="Wow-uS-Lgb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VeT-xA-Pi8" customClass="StockViewController" customModule="watchlist_api" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="7eq-g7-qIo"/>
+                        <viewControllerLayoutGuide type="bottom" id="UaX-he-Wfb"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="LDK-ae-P5h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ydP-35-hYf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XTi-Nu-62E">
+                                    <size key="itemSize" width="174" height="232"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WatchlistStockViewCell" id="cpr-5c-1lA" customClass="StockViewCell" customModule="watchlist_api" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="232"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="232"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sYn-EA-R4D">
+                                                    <rect key="frame" x="13" y="20" width="195" height="244"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="emN-Qc-IEh" customClass="LineChartView" customModule="watchlist_api" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="159" height="124"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="esb-UL-mp0">
+                                                            <rect key="frame" x="0.0" y="124" width="113" height="69"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bb-Mm-yYz">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="61" height="69"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="69" id="ER1-hf-ahJ"/>
+                                                                        <constraint firstAttribute="width" constant="61" id="S9m-g6-db3"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="mWQ-ju-Qw4">
+                                                                    <rect key="frame" x="71" y="0.0" width="42" height="69"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBu-kE-0Vp">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="37.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evo-mQ-5LK">
+                                                                            <rect key="frame" x="0.0" y="48.5" width="42" height="20.5"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="evo-mQ-5LK" firstAttribute="width" secondItem="rBu-kE-0Vp" secondAttribute="width" id="1pl-CN-XHm"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="rBu-kE-0Vp" secondAttribute="trailing" id="6Of-JZ-yvw"/>
+                                                                        <constraint firstItem="rBu-kE-0Vp" firstAttribute="leading" secondItem="mWQ-ju-Qw4" secondAttribute="leading" id="RyH-pU-KVK"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="evo-mQ-5LK" secondAttribute="bottom" id="VA7-wg-3jT"/>
+                                                                        <constraint firstItem="rBu-kE-0Vp" firstAttribute="top" secondItem="mWQ-ju-Qw4" secondAttribute="top" id="eqh-t8-QKY"/>
+                                                                        <constraint firstItem="evo-mQ-5LK" firstAttribute="top" secondItem="rBu-kE-0Vp" secondAttribute="bottom" constant="11" id="k6m-zx-U9K"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="evo-mQ-5LK" secondAttribute="trailing" id="m2X-cN-bMX"/>
+                                                                    </constraints>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="0bb-Mm-yYz" firstAttribute="top" secondItem="esb-UL-mp0" secondAttribute="top" id="7GI-ZO-VlI"/>
+                                                                <constraint firstItem="0bb-Mm-yYz" firstAttribute="leading" secondItem="esb-UL-mp0" secondAttribute="leading" id="PjA-M5-2zS"/>
+                                                                <constraint firstAttribute="bottom" secondItem="0bb-Mm-yYz" secondAttribute="bottom" id="VYf-Zj-i0Q"/>
+                                                                <constraint firstItem="mWQ-ju-Qw4" firstAttribute="leading" secondItem="0bb-Mm-yYz" secondAttribute="trailing" constant="10" id="bYS-f0-S8X"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="emN-Qc-IEh" firstAttribute="top" secondItem="sYn-EA-R4D" secondAttribute="top" id="XdI-8d-6G2"/>
+                                                        <constraint firstItem="emN-Qc-IEh" firstAttribute="leading" secondItem="sYn-EA-R4D" secondAttribute="leading" id="dak-fk-x4j"/>
+                                                        <constraint firstAttribute="trailing" secondItem="emN-Qc-IEh" secondAttribute="trailing" constant="36" id="qRo-DF-G4c"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="lineChartView" destination="emN-Qc-IEh" id="vQG-M0-wPd"/>
+                                            <outlet property="nameLabel" destination="rBu-kE-0Vp" id="6xh-e8-JsX"/>
+                                            <outlet property="priceLabel" destination="evo-mQ-5LK" id="mrd-uB-dcn"/>
+                                            <outlet property="stockLogo" destination="0bb-Mm-yYz" id="mKA-mm-2MH"/>
+                                            <segue destination="GVj-0O-Pe0" kind="show" identifier="ShowIndividualStock" id="RkD-rN-UVe"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="VeT-xA-Pi8" id="GNR-dM-IbQ"/>
+                                    <outlet property="delegate" destination="VeT-xA-Pi8" id="JVh-ol-N9s"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="stockView" destination="ydP-35-hYf" id="GmR-yw-9X3"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vYf-aB-5bE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-108" y="-80.50974512743629"/>
+        </scene>
+        <!--Individual Stock View Controller-->
+        <scene sceneID="C3k-lK-LOg">
+            <objects>
+                <viewController id="GVj-0O-Pe0" customClass="IndividualStockViewController" customModule="watchlist_api" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dWP-9S-oBu"/>
+                        <viewControllerLayoutGuide type="bottom" id="yTq-qT-vab"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AkZ-cb-hDR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOd-h2-bte">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiZ-XR-qT1">
+                                        <rect key="frame" x="114" y="33" width="164" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="zfc-Dp-eIY">
+                                        <rect key="frame" x="0.0" y="180" width="375" height="135"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="laB-0F-Lxi">
+                                            <size key="itemSize" width="161" height="143"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UJO-W5-eZi" customClass="NewsViewCell" customModule="watchlist_api" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="161" height="143"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="161" height="143"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1O-uc-clB">
+                                                            <rect key="frame" x="119" y="94" width="42" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5n-4V-UhE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="161" height="115"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                                <connections>
+                                                    <outlet property="headlineLabel" destination="Axd-uo-twk" id="dbh-tm-Ved"/>
+                                                    <outlet property="newsImage" destination="i5n-4V-UhE" id="rM8-iV-2MJ"/>
+                                                    <outlet property="sourceLabel" destination="M1O-uc-clB" id="351-Fh-dSw"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8mw-ZN-wf8">
+                                        <rect key="frame" x="8" y="33" width="98" height="96"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xko-83-FOY">
+                                        <rect key="frame" x="114" y="91" width="164" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axd-uo-twk">
+                                        <rect key="frame" x="8" y="294" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7cI-2X-geS" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="323" width="375" height="296"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hOd-h2-bte" firstAttribute="top" secondItem="AkZ-cb-hDR" secondAttribute="top" id="BFc-WF-z0Q"/>
+                            <constraint firstItem="yTq-qT-vab" firstAttribute="top" secondItem="hOd-h2-bte" secondAttribute="bottom" id="ZSZ-Ot-BO8"/>
+                            <constraint firstItem="hOd-h2-bte" firstAttribute="leading" secondItem="AkZ-cb-hDR" secondAttribute="leading" id="fO3-iA-leQ"/>
+                            <constraint firstAttribute="trailing" secondItem="hOd-h2-bte" secondAttribute="trailing" id="tGf-Am-NqD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="individualLineChartView" destination="7cI-2X-geS" id="yer-x3-Kbs"/>
+                        <outlet property="individualStockView" destination="hOd-h2-bte" id="79S-co-jFe"/>
+                        <outlet property="logo" destination="8mw-ZN-wf8" id="DgY-Uc-eVq"/>
+                        <outlet property="nameLabel" destination="uiZ-XR-qT1" id="Blx-UR-BlT"/>
+                        <outlet property="newsCollectionView" destination="zfc-Dp-eIY" id="ADe-Jh-lYv"/>
+                        <outlet property="priceLabel" destination="Xko-83-FOY" id="RlW-o5-mOQ"/>
+                        <segue destination="3FT-EG-M72" kind="show" identifier="ShowNews" id="RXa-4m-LUU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqZ-d6-YZs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671.20000000000005" y="-80.50974512743629"/>
+        </scene>
+        <!--News View Controller-->
+        <scene sceneID="Csa-Hx-8z8">
+            <objects>
+                <viewController storyboardIdentifier="news " id="3FT-EG-M72" customClass="NewsViewController" customModule="watchlist_api" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gw1-V7-IFx"/>
+                        <viewControllerLayoutGuide type="bottom" id="5zI-b8-61T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qp4-Oj-dIl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDw-Rg-pel">
+                                <rect key="frame" x="1" y="44" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDE-rH-doa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Nues" id="QBN-Op-JBA"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="newsView" destination="QDw-Rg-pel" id="oDa-w0-k6w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfh-bL-1E4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1444" y="-80.50974512743629"/>
         </scene>
     </scenes>
 </document>
