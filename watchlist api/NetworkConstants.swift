@@ -51,6 +51,7 @@ struct Constants {
         static let logo = "/logo"
         static let quote = "/quote"
         static let chartOneDay = "/chart/1d"
+        static let chartOneMonth = "/chart/1m"
     }
 
 //    let dateFormatter = NSDateFormatter()

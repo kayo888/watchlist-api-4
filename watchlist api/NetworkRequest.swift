@@ -230,7 +230,6 @@ struct NetworkRequest {
     static func getAverages (symbol: String, completion: @escaping ([String: Double]) -> Void) {
         let stockDataEndpoint = "\(Constants.IEX.IEXBase)\(symbol)\(Constants.IEXParameters.chartOneDay)"
         
-        print(stockDataEndpoint)
         let time = Date()
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
@@ -251,10 +250,10 @@ struct NetworkRequest {
                         let time = data["minute"].stringValue
                         let average = data["average"].doubleValue
                         
-                            averages[time] = average
+                        averages[time] = average
                         
                     }
-//                    print(averages)
+                    //                    print(averages)
                     completion(averages)
                 }
             case .failure(let error):
@@ -265,6 +264,34 @@ struct NetworkRequest {
         }
         
     }
+    
+    static func getMonthAverages(symbol: String, completion: @escaping ([String: Double]) -> Void) {
+        let stockDataEndpoint = "\(Constants.IEX.IEXBase)\(symbol)\(Constants.IEXParameters.chartOneMonth)"
+        
+        var averages: [String: Double] = [:]
+        
+        Alamofire.request(stockDataEndpoint).validate().responseJSON() { response in
+            switch response.result {
+            case .success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    let allTimeData = json.arrayValue
+                    
+                    for data in allTimeData {
+                        let date = data["date"].stringValue
+                        let close = data["close"].doubleValue
+                        
+                        averages[date] = close
+                    }
+                    completion(averages)
+                    
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     
     static func getNews (symbol: String, completion: @escaping ([NewsItem]) -> Void) {
         var newsItems = [NewsItem]()

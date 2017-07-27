@@ -15,7 +15,6 @@
 		6D1B3C381F1449E50091B031 /* watchlist_apiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1B3C371F1449E50091B031 /* watchlist_apiTests.swift */; };
 		6D1B3C431F1449E50091B031 /* watchlist_apiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1B3C421F1449E50091B031 /* watchlist_apiUITests.swift */; };
 		6D1B3C511F144CC70091B031 /* StockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1B3C501F144CC70091B031 /* StockViewController.swift */; };
-		6D1B3C531F1498FA0091B031 /* Random-User.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D1B3C521F1498FA0091B031 /* Random-User.json */; };
 		6D1B3C571F1560EB0091B031 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1B3C561F1560EA0091B031 /* Stock.swift */; };
 		6D1B3C591F15614B0091B031 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1B3C581F15614B0091B031 /* NetworkRequest.swift */; };
 		6D1B3C5B1F1566E80091B031 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1B3C5A1F1566E80091B031 /* NetworkConstants.swift */; };
@@ -65,7 +64,6 @@
 		6D1B3C421F1449E50091B031 /* watchlist_apiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchlist_apiUITests.swift; sourceTree = "<group>"; };
 		6D1B3C441F1449E50091B031 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D1B3C501F144CC70091B031 /* StockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StockViewController.swift; path = ../StockViewController.swift; sourceTree = "<group>"; };
-		6D1B3C521F1498FA0091B031 /* Random-User.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "Random-User.json"; path = "../../Downloads/JSON-API-Swift-Starter-swift3/API-Sandbox/JSON/Random-User.json"; sourceTree = SOURCE_ROOT; };
 		6D1B3C561F1560EA0091B031 /* Stock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		6D1B3C581F15614B0091B031 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		6D1B3C5A1F1566E80091B031 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 				6DFFF2F81F227439001EEC6E /* NewsViewController.swift */,
 				6D1B3C5C1F1571050091B031 /* Storyboards */,
 				6D1B3C291F1449E40091B031 /* Assets.xcassets */,
-				6D1B3C521F1498FA0091B031 /* Random-User.json */,
 				6D1B3C2E1F1449E40091B031 /* Info.plist */,
 			);
 			path = "watchlist api";
@@ -324,7 +321,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D1B3C2D1F1449E40091B031 /* LaunchScreen.storyboard in Resources */,
-				6D1B3C531F1498FA0091B031 /* Random-User.json in Resources */,
 				6D1B3C2A1F1449E40091B031 /* Assets.xcassets in Resources */,
 				6D1B3C281F1449E40091B031 /* Main.storyboard in Resources */,
 			);
